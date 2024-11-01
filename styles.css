@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/picture/ob3.gif');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    font-family: Georgia, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 10;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.highlight {
+    color: #00aaff;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+.enroll-button {
+    background-color: #00aaff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 170, 255, 0.3);
+}
+
+.header-separator {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.planet-details h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.planet-details h1 {
+    font-size: 100px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #ffffff;
+    letter-spacing: 5px;
+    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+    font-size: 16px;
+    color: #c0c0c0;
+    margin: 20px 0;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.get-started {
+    background-color: #00aaff;
+    border: 3px solid #ffffff; /* Mantém a borda de 3px */
+    padding: 17px 53px; /* Aumenta o padding horizontal para 50px */
+    color: #000000; /* Cor do texto em preto */
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.get-started:hover {
+    transform: scale(1.05);
+}
+
+
+/* Efeito de brilho */
+.get-started::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    transform: skewX(-30deg);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.get-started:hover::before {
+    animation: shimmer 2s infinite;
+    opacity: 1;
+}
+
+/* Animação de cintilação */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.planets-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 40px;
+    padding: 0 50px;
+}
+
+.planet-thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.planet-thumb img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.planet-thumb span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c0c0c0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.earth-gif {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 0;
+    position: relative;
+    bottom: -10px;
+}
+
+/* Estilos para o ícone de menu */
+.menu-icon {
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.menu-icon:hover {
+    color: #00aaff;
+}
+
+/* Estilos para o menu lateral */
+#sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+#sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    color: #00aaff;
+}
+
+.planet-venus, .planet-mars {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 450px; 
+}
+
+.planet-venus {
+    left: 30px;
+}
+
+.planet-mars {
+    right: 30px;
+}
+
+.planet-image {
+    width: 100%;
+    height: auto;
+    border: none; 
+    border-radius: 0; 
+    box-shadow: none; 
+    display: block; 
+    margin: 0; 
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cloud-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+    opacity: 0;
+    z-index: 100;
+    transition: opacity 3s ease;
+}
+
+.cloud-animation.active {
+    opacity: 1;
+}
+
+
+#clouds-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #fff, #f0f0f0);
+    opacity: 0;
+    transition: opacity 3s;
+    pointer-events: none;
+    z-index: 20;
+}
