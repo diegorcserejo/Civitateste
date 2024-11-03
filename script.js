@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const getStartedButton = document.querySelector(".get-started");
+    const getStartedButton = document.querySelector(".get-started, .botao-proximo");
     const cloudsOverlay = document.getElementById("clouds-overlay");
 
     getStartedButton.addEventListener("click", () => {
         cloudsOverlay.style.opacity = "1"; // Inicia a animação de opacidade
         setTimeout(() => {
             window.location.href = "index2.html"; // Redireciona após a animação
-        }, 3000); // 3 segundos para completar a transição
+        }, 1000); // 1 segundo para completar a transição
     });
 });
 

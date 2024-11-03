@@ -80,6 +80,7 @@ main {
     color: #ffffff;
     margin-bottom: 10px;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .planet-details h1 {
@@ -179,15 +180,6 @@ main {
     letter-spacing: 1px;
 }
 
-.earth-gif {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto 0;
-    position: relative;
-    bottom: -10px;
-}
-
 /* Estilos para o ícone de menu */
 .menu-icon {
     font-size: 24px;
@@ -251,6 +243,302 @@ main {
     box-shadow: none; 
     display: block; 
     margin: 0; 
+}
+
+/* Ajusta o contêiner principal */
+.form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Aumenta a largura para manter espaço para os elementos */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    height: 100vh;
+}
+
+/* Linha branca de separação centralizada */
+.separator-line {
+    width: 3px;
+    background-color: #ffffff;
+    height: 90%; /* Ajuste a altura conforme necessário */
+    position: absolute;
+    left: 50%; /* Coloca no meio da tela */
+    transform: translateX(-50%);
+}
+
+/* Reposiciona a seção do formulário */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinha o formulário à direita */
+    align-items: center;
+    padding-right: 50px; /* Ajuste para afastar um pouco mais da linha */
+}
+
+/* Ajuste para o GIF do planeta Terra */
+.earth-gif2 {
+    width: 350px; /* Ajuste o tamanho conforme necessário */
+    margin-top: 20px;
+}
+
+/* Estilos do contêiner de formulário */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px; /* Ajuste o padding conforme necessário */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    color: #ffffff;
+}
+
+.form-container p {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    margin-top: 40px; /* Aumenta o espaço acima dos ícones */
+    margin-bottom: 20px; /* Espaço abaixo dos ícones para separar do conteúdo abaixo */
+}
+
+.social-icons a {
+    margin: 0 15px; /* Espaçamento lateral entre os ícones */
+    color: #ffffff; /* Cor dos ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o ícone dentro do círculo */
+    align-items: center; /* Alinha verticalmente o ícone */
+    width: 50px; /* Largura do círculo */
+    height: 50px; /* Altura do círculo */
+    border-radius: 50%; /* Faz o contorno ficar circular */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.social-icons a:hover {
+    background-color: #00aaff; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Remover posicionamento absoluto das classes */
+.planet-venus1,
+.planet-mars1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Ajuste da imagem do planeta */
+.planet-image1 {
+    width: 250px; /* Tamanho desejado */
+    height: auto;
+    border-radius: 50%;
+}
+
+.input-group {
+    position: relative; /* Para posicionar os ícones em relação ao input */
+    margin-bottom: 15px;
+}
+
+/* Estilos para os inputs */
+.input-group input {
+    width: 100%;
+    padding: 15px 60px; /* Aumenta o padding para mais conforto */
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    min-height: 50px; /* Define uma altura mínima para os inputs */
+}
+
+/* Estilo para o ícone dentro do input */
+.input-group .user-icon,
+.input-group .email-icon,
+.input-group .lock-icon {
+    position: absolute;
+    left: 10px; /* Distância do ícone ao lado esquerdo do input */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição vertical */
+    color: #ffffff; /* Cor do ícone */
+}
+
+/* Estilo para o ícone de visualização de senha */
+.input-group .icons8-visvel-32-1 {
+    position: absolute;
+    right: 10px; /* Distância do ícone ao lado direito do input */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição vertical */
+    color: #ffffff; /* Cor do ícone */
+}
+
+/* Estilos para os inputs */
+.input-group input {
+    width: 100%; /* Garante que todos os inputs ocupem a largura total do contêiner */
+    padding: 15px 60px; /* Aumenta o padding para mais conforto */
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    min-height: 50px; /* Define uma altura mínima para os inputs */
+}
+
+/* Estilo específico para o input de arquivo (RG) */
+.input-group input[type="file"] {
+    padding: 15px; /* Ajusta o padding para manter consistência */
+    cursor: pointer; /* Adiciona um cursor de ponteiro para indicar que é clicável */
+}
+
+.confirm-password-text {
+    display: flex; /* Para alinhar a imagem ao lado do texto */
+    align-items: center; /* Alinha verticalmente */
+    font-size: 17px; /* Tamanho da fonte do texto */
+    margin-top: 10px; /* Espaço acima do parágrafo */
+    margin-bottom: 15px; /* Espaço abaixo do parágrafo */
+    color: #ffffff; /* Cor do texto */
+}
+
+.check-mark {
+    width: 20px; /* Largura da imagem do check mark */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.botao-proximo {
+    background-color: #00aaff;
+    border: 3px solid #ffffff; /* Mantém a borda de 3px */
+    padding: 17px 53px; /* Aumenta o padding horizontal para 50px */
+    color: #000000; /* Cor do texto em preto */
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.botao-cadastrar {
+    padding: 18px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.botao-cadastrar a {
+    padding: 20px;
+    font-size: 24px;
+    color: #00aaff;
+}
+
+.header2 {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.header2 h1 {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.content {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.description {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+/* Estilo para o container das opções */
+.options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilo de cada opção */
+.option {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 350px;
+    color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    display: flex;               /* Adicionado para habilitar o flexbox */
+    flex-direction: column;      /* Organiza os itens em coluna */
+    align-items: center;         /* Centraliza os itens horizontalmente */
+}
+
+
+/* Estilo do título de cada opção */
+.option h2 {
+    font-size: 24px;
+    color: #00aaff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 5px;
+}
+
+/* Estilo do texto de descrição */
+.option p {
+    font-size: 16px;
+    color: #c0c0c0;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos botões */
+.option .button2 {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #00aaff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5);
+    display: flex;              /* Não é necessário, pois o contêiner já é flex */
+    align-items: center;        /* Alinha o conteúdo dentro do botão, se necessário */
+    justify-content: center;    /* Alinha o conteúdo dentro do botão, se necessário */
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5);
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.option .button2:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+}
+
+/* Adicione esta regra CSS para o contêiner pai */
+.form-wrapper2 {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+    height: 100vh; /* Define a altura do contêiner para ocupar toda a altura da viewport */
+}
+
+/* Se a classe planet-details3 ainda não tiver estilos, adicione isso */
+.planet-details3 {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos dentro da seção verticalmente */
+    align-items: center; /* Alinha os itens dentro de planet-details3 ao centro */
 }
 
 .close-btn {
